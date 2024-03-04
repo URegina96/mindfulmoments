@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/neutral_background_color">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/mindful_moments"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonMeditation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meditation"
+        android:layout_below="@id/textViewTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/buttonNatureSounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nature_sounds"
+        android:layout_below="@id/buttonMeditation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonGratitudeJournal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gratitude_journal"
+        android:layout_below="@id/buttonNatureSounds"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>

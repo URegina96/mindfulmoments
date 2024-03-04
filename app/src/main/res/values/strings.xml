@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">mindfulMoments</string>
+    <string name="meditation_selection">Выбор медитации</string>
+    <string name="mindful_breathing_meditation">Осознанная дыхательная медитация</string>
+    <string name="body_scan_meditation">Медитация сканирования тела</string>
+    <string name="loving_kindness_editation">Медитация любящей доброты</string>
+    <string name="mindful_moments">Осознанные моменты</string>
+    <string name="meditation">Медитация</string>
+    <string name="nature_sounds">Звуки природы</string>
+    <string name="gratitude_journal">Дневник благодарности</string>
+    <string name="settings">Настройки</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
