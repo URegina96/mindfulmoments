@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp"
     android:background="@color/neutral_background_color">
 
-    <!-- Видеоплеер или список звуков природы для выбора -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nature_sounds"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp" />
 
-</RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/soothing_sounds_of_rain"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/the_enticing_sound_of_the_forest"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alluring_sound_of_the_ocean"
+        android:layout_marginBottom="8dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sounds_of_a_summer_fire"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Другие виды медитаций -->
+
+</LinearLayout>

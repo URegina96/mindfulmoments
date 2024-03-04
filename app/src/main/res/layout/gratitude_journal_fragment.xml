@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp"
     android:background="@color/neutral_background_color">
 
-    <!-- Поле для ввода записей в дневнике благодарности, кнопка "Сохранить" -->
+    <EditText
+        android:id="@+id/editTextGratitudeEntry"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:hint="Write your gratitude entry..."
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_marginBottom="16dp"/>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/buttonSaveEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonViewPreviousEntries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Previous Entries"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

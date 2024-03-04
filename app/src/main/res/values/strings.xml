@@ -11,4 +11,9 @@
     <string name="settings">Настройки</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="soothing_sounds_of_rain">Успокаивающие звуки дождя</string>
+    <string name="the_enticing_sound_of_the_forest">Заманчивый звук леса</string>
+    <string name="alluring_sound_of_the_ocean">Заманчивый шум океана</string>
+    <string name="sounds_of_a_summer_fire">Звуки летнего костра</string>
 </resources>

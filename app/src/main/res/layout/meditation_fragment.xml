@@ -32,6 +32,4 @@
         android:text="@string/loving_kindness_editation"
         android:layout_marginBottom="8dp" />
 
-    <!-- Другие виды медитаций -->
-
 </LinearLayout>
