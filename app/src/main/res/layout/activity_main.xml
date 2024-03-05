@@ -60,17 +60,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonNatureSounds" />
 
-    <ImageView
-        android:id="@+id/imageViewSettings"
-        android:layout_width="102dp"
-        android:layout_height="106dp"
-        android:layout_below="@+id/buttonGratitudeJournal"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewRegistration"
-        app:layout_constraintHorizontal_bias="0.58"
-        app:layout_constraintStart_toEndOf="@+id/imageViewSettingsReminder"
-        app:srcCompat="@drawable/settingreminder" />
 
     <ImageView
         android:id="@+id/imageViewRegistration"
@@ -84,17 +73,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/setting" />
 
-    <ImageView
-        android:id="@+id/imageViewSettingsReminder"
-        android:layout_width="106dp"
-        android:layout_height="107dp"
-        android:layout_below="@+id/buttonGratitudeJournal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/remindersettings" />
         <FrameLayout
             android:id="@+id/fragmentContainerRegistration"
             android:layout_width="match_parent"
