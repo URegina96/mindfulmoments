@@ -8,19 +8,21 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 
 class Registration : Fragment() {
-    private var username: String? = null
-    private var password: String? = null
+    private lateinit var viewModel: RegistrationViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.registration_fragment, container, false)
 
-        view.findViewById<Button>(R.id.buttonLogin).setOnClickListener {
-            val enteredUsername = view.findViewById<EditText>(R.id.editTextUsername).text.toString()
-            val enteredPassword = view.findViewById<EditText>(R.id.editTextPassword).text.toString()
+        viewModel = ViewModelProvider(this).get(RegistrationViewModel::class.java)
 
-            if (enteredUsername == username && enteredPassword == password) {
+        view.findViewById<Button>(R.id.buttonLogin).setOnClickListener {
+            viewModel.username.value = view.findViewById<EditText>(R.id.editTextUsername).text.toString()
+            viewModel.password.value = view.findViewById<EditText>(R.id.editTextPassword).text.toString()
+
+            if (viewModel.loginUser()) {
                 // Данные верные, выполнить вход пользователя
                 // Например, переход на другой экран или выполнение действий по входу
             } else {
@@ -29,11 +31,14 @@ class Registration : Fragment() {
         }
 
         view.findViewById<Button>(R.id.buttonRegister).setOnClickListener {
-            username = view.findViewById<EditText>(R.id.editTextUsername).text.toString()
-            password = view.findViewById<EditText>(R.id.editTextPassword).text.toString()
-            // Можно здесь сохранить данные пользователя в SharedPreferences или базу данных
-            // Например, использовать SharedPreferences для сохранения username и password
-            Toast.makeText(requireContext(), "Регистрация прошла успешно", Toast.LENGTH_SHORT).show()
+            viewModel.username.value = view.findViewById<EditText>(R.id.editTextUsername).text.toString()
+            viewModel.password.value = view.findViewById<EditText>(R.id.editTextPassword).text.toString()
+
+            if (viewModel.registerUser()) {
+                Toast.makeText(requireContext(), "Регистрация прошла успешно", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(requireContext(), "Ошибка при регистрации", Toast.LENGTH_SHORT).show()
+            }
         }
 
         return view
