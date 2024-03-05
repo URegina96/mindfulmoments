@@ -10,8 +10,9 @@ import android.widget.EditText
 import android.widget.Toast
 
 class Registration : Fragment() {
-    private var username: String? = null
-    private var password: String? = null
+    private val model = RegistrationModel()
+    private val view: RegistrationView by lazy { RegistrationView(requireContext()) }
+    private val intent = RegistrationIntent()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.registration_fragment, container, false)
@@ -20,20 +21,20 @@ class Registration : Fragment() {
             val enteredUsername = view.findViewById<EditText>(R.id.editTextUsername).text.toString()
             val enteredPassword = view.findViewById<EditText>(R.id.editTextPassword).text.toString()
 
-            if (enteredUsername == username && enteredPassword == password) {
+            if (model.username == enteredUsername && model.password == enteredPassword) {
                 // Данные верные, выполнить вход пользователя
                 // Например, переход на другой экран или выполнение действий по входу
             } else {
-                Toast.makeText(requireContext(), "Неверное имя пользователя или пароль", Toast.LENGTH_SHORT).show()
+                view.showToast("Неверное имя пользователя или пароль")
             }
         }
 
         view.findViewById<Button>(R.id.buttonRegister).setOnClickListener {
-            username = view.findViewById<EditText>(R.id.editTextUsername).text.toString()
-            password = view.findViewById<EditText>(R.id.editTextPassword).text.toString()
+            model.username = view.findViewById<EditText>(R.id.editTextUsername).text.toString()
+            model.password = view.findViewById<EditText>(R.id.editTextPassword).text.toString()
             // Можно здесь сохранить данные пользователя в SharedPreferences или базу данных
             // Например, использовать SharedPreferences для сохранения username и password
-            Toast.makeText(requireContext(), "Регистрация прошла успешно", Toast.LENGTH_SHORT).show()
+            view.showToast("Регистрация прошла успешно")
         }
 
         return view
@@ -42,4 +43,8 @@ class Registration : Fragment() {
     companion object {
         // Остальной код оставляем без изменений
     }
+}
+
+private fun View.showToast(s: String) {
+
 }
