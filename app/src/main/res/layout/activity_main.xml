@@ -16,6 +16,8 @@
         android:layout_marginTop="84dp"
         android:text="@string/mindful_moments"
         android:textSize="24sp"
+        android:textColor="@color/accent_color"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
