@@ -12,4 +12,12 @@ class GratitudeJournal : Fragment() {
         super.onCreate(savedInstanceState)
 
     }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        // Раздуваем макет для этого фрагмента
+        return inflater.inflate(R.layout.gratitude_journal_fragment, container, false)
+    }
+
+    companion object {
+        // Остальной код оставляем без изменений
+    }
 }

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:hint="Write your gratitude entry..."
+        android:hint="Напишите свою благодарность..."
         android:inputType="textMultiLine"
         android:gravity="top"
         android:layout_marginBottom="16dp"/>
@@ -20,7 +20,7 @@
         android:id="@+id/buttonSaveEntry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/save"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"/>
 
@@ -28,7 +28,7 @@
         android:id="@+id/buttonViewPreviousEntries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Previous Entries"
+        android:text="@string/viewpreviousentries"
         android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
